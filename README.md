@@ -53,6 +53,7 @@ Clone this repository and enter it:
   export SHELL=/bin/zsh
   exec /bin/zsh -l
   ```
+- `source ~/.bash_profile`
 
 ### oh-my-zsh
 
