@@ -82,6 +82,7 @@ Clone this repository and enter it:
 ### Cargo + Rust
 
 - `curl https://sh.rustup.rs -sSf | sh`
+- `source "$HOME/.cargo/env"`
 
 ### [macchina](https://github.com/Macchina-CLI/macchina/wiki/Installation)
 
