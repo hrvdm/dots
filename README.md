@@ -92,6 +92,10 @@ Clone this repository and enter it:
 - `strip target/release/macchina`
 - `sudo cp target/release/macchina /bin/`
 
+### [Starship](https://starship.rs/)
+
+- `curl -sS https://starship.rs/install.sh | sh`
+
 ### Copy config files to the correct location
 
 - `cp -r Wallpapers ~`
