@@ -106,6 +106,10 @@ You do not need to install this.
 
 - `git config --global user.name "username"`
 - `git config --global user.email "foo@bar.com"`
+- `ssh-keygen -t ed25519 -C "your_email@example.com"`
+
+Then `cat` the created .pub file and add to github under settings:
+https://github.com/settings/keys
 
 ### Enable shell themeing
 
