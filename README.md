@@ -12,6 +12,12 @@
   PopOS comes with a neat optimus switcher out the box, and I can quite happily work with the vanilla config should I need to. Down the line I will setup a neat Hyprland + Arch setup, but for now this works well for me.
 </details>
 <br>
+<details>
+  <summary>TODO</summary>
+  <br>
+  - Make a neat install.sh
+  - Add config command for Touchpad right click menu
+</details>
 
 ## Screenshots
 
@@ -136,6 +142,12 @@ I use the $8/mo Sync package, but if you dont want to pay for Sync, you can self
 - Download latest .deb from https://obsidian.md/download
 - `chmod +x obsidian_1.4.16_amd64.deb`
 - `sudo dpkg -i obsidian_1.4.16_amd64.deb `
+
+### VMWare Workstation Pro
+
+Download Workstation Pro from here: https://www.vmware.com/uk/products/workstation-pro/workstation-pro-evaluation.html
+- `chmod +x VMware-Workstation-Full-17.5.0-22583795.x86_64.bundle`
+- `sudo ./VMware-Workstation-Full-17.5.0-22583795.x86_64.bundle`
 
 ### Set Hostname
 
