@@ -172,8 +172,8 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
 
 2. WhiteSur Theme
 
-   - `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git --depth=1`
-   - `cd WhiteSur-gtk-theme`
+   - `git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git`
+   - `cd WhiteSur-icon-theme`
    - `./install.sh -c Dark`
    - `./install.sh -c Dark -l` (Libadwaita fix)
    - `./tweaks.sh --firefox`
@@ -183,6 +183,18 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
    You may need to follow the steps here:
 
    - https://github.com/vinceliuice/WhiteSur-firefox-theme#macos-and-windows-version
+
+2. WhiteSur Icons
+
+   - `git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git`
+   - `cd WhiteSur-icon-theme`
+   - `./install.sh `
+  
+4. Cursor Theme
+
+   Currently I use this theme: https://www.gnome-look.org/p/1358330
+   
+   If you have been following this guide so far, you can just install with ocs-url.
 
 ## Other
 
