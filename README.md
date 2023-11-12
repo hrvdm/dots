@@ -159,7 +159,6 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
 
 - Open GNOME Extensions
 - Disable:
-  - Applications Menu
   - Auto Move Windows
   - Cosmic Dock
   - Cosmic Workspaces
@@ -169,7 +168,6 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
   - Places Status Indicator
   - Screenshot Window Sizer
   - Window List
-  - windowNavigator
   - Workspace Indicator
 
 2. WhiteSur Theme
@@ -223,3 +221,10 @@ You can check this was applied with
 Revert this with:
 
 - `sudo kernelstub -d "button.lid_init_state=open"`
+
+#### Remove LibreOffice:
+
+I just use the Gsuite or obsidian, so this is wasted space.
+
+- `sudo apt-get remove --purge libreoffice\*`
+- `sudo apt-get clean`
