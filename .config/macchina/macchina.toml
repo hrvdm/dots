@@ -1,0 +1,18 @@
+theme = "hvdm"
+
+interface = "wlo1"
+long_uptime = false
+long_shell = false
+long_kernel = false
+current_shell = true
+physical_cores = true
+
+show = [
+  "Host",
+  "Distribution",
+  "Shell",
+  "Packages",
+  "GPU",
+  "ProcessorLoad",
+  "Memory",
+]
