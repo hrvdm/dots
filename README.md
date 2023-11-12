@@ -48,7 +48,7 @@ Clone this repository and enter it:
 
 - `sudo add-apt-repository ppa:maarten-fonville/android-studio`
 
-- `sudo apt install apt-transport-https code zsh gnome-tweaks gnome-shell-extensions openjdk-17-jdk git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev libqt5svg5 qml-module-qtquick-controls android-studio flameshot kitty nala`
+- `sudo apt install apt-transport-https code zsh gnome-tweaks gnome-shell-extensions openjdk-17-jdk git curl libssl-dev libreadline-dev zlib1g-dev autoconf bison build-essential libyaml-dev libreadline-dev libncurses5-dev libffi-dev libgdbm-dev libqt5svg5 qml-module-qtquick-controls libvips-dev android-studio flameshot kitty nala`
 
 ### zsh
 
