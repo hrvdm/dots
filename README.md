@@ -19,6 +19,15 @@
 
 ## Setup
 
+### Git config
+
+- `git config --global user.name "username"`
+- `git config --global user.email "foo@bar.com"`
+- `ssh-keygen -t ed25519 -C "your_email@example.com"`
+
+Then `cat` the created .pub file and add to github under settings:
+https://github.com/settings/keys
+
 Clone this repository and enter it:
 
 - `git clone git@github.com:hrvdm/PopOS-Dots.git`
@@ -101,15 +110,6 @@ You do not need to install this.
 
 - `rbenv install 2.7.5`
 - `rbenv global 2.7.5`
-
-### Git config
-
-- `git config --global user.name "username"`
-- `git config --global user.email "foo@bar.com"`
-- `ssh-keygen -t ed25519 -C "your_email@example.com"`
-
-Then `cat` the created .pub file and add to github under settings:
-https://github.com/settings/keys
 
 ### Enable shell themeing
 
