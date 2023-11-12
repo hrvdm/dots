@@ -240,3 +240,10 @@ I just use the Gsuite or obsidian, so this is wasted space.
 
 - `sudo apt-get remove --purge libreoffice\*`
 - `sudo apt-get clean`
+
+#### Change Kitty Icon:
+
+Download the icon you want. I use the one under the kitty folder in this repos .config
+
+Update the `Icon=` path in the kitty.desktop file:
+- `sudo nano ~/.local/share/applications/kitty.desktop`
