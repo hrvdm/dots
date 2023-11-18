@@ -71,9 +71,9 @@ Clone this repository and enter it:
 
 ### discord
 
-- `wget https://dl.discordapp.net/apps/linux/0.0.34/discord-0.0.34.deb`
-- `chmod +x discord-0.0.34.deb`
-- `sudo dpkg -i discord-0.0.34.deb`
+- `wget https://dl.discordapp.net/apps/linux/0.0.34/discord-0.0.35.deb`
+- `chmod +x discord-0.0.35.deb`
+- `sudo dpkg -i discord-0.0.35.deb`
 
 ### rbenv
 
