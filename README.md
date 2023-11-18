@@ -243,3 +243,17 @@ Create a kitty.desktop file, or use the one included in this repo:
 
 Update the `Icon=` path in the kitty.desktop file.
 
+
+#### Configure Dual Boot w/ Windows 11:
+
+- Configure systemd boot menu: `sudo nano /boot/efi/loader/loader.conf`
+- Add, then save and exit: 
+  ```
+  timeout 10
+  entries 1
+  ```
+- Install os-prober: `sudo nala install os-prober -y`
+- Run os-prober: `sudo os-prober`
+- Mount windows dir to /mnt: `sudo mount /dev/nvme1n1p1 /mnt`
+- Copy the /mnt/EFI/Microsoft directory to /boot/efi/EFI/: `sudo cp -ax /mnt/EFI/Microsoft /boot/efi/EFI`
+- Reboot
