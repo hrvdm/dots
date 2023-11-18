@@ -165,7 +165,7 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
 
 2. WhiteSur Theme
 
-   - `git clone https://github.com/vinceliuice/WhiteSur-icon-theme.git`
+   - `git clone https://github.com/vinceliuice/WhiteSur-gtk-theme.git`
    - `cd WhiteSur-icon-theme`
    - `./install.sh -c Dark`
    - `./install.sh -c Dark -l` (Libadwaita fix)
