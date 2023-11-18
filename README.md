@@ -191,11 +191,15 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
 
 ## Other
 
-### Custom firefox startpage
+### Firefox Settings
 
 I use a custom startpage for firefox across all my machines. You can set one via:
 
-- Edit -> Preferences -> General -> Home Page
+- about:preferences > Home tab > Set Homepage and new windows & New tabs to "Custom Url"
+
+For middle click scroll to work, you need to enable use Autoscroll:
+
+- about:preferences > Browsing (Very near the bottom) > Use Autoscrolling
 
 ### Disable hardware acceleration in Firefox
 
