@@ -107,7 +107,7 @@ Clone this repository and enter it:
 - `cp -r Wallpapers ~`
 - `cp .zshrc ~`
 - `cp .netrc ~`
-- `mv -r .config/* ~/.config`
+- `mv .config/* ~/.config`
 
 ### Setup .netrc (for mapbox development)
 
