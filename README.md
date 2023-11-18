@@ -159,16 +159,9 @@ Download Workstation Pro from here: https://www.vmware.com/uk/products/workstati
 
 - Open GNOME Extensions
 - Disable:
-  - Auto Move Windows
   - Cosmic Dock
   - Cosmic Workspaces
   - Desktop Icons NG
-  - Launch new instance
-  - Native Window Placement
-  - Places Status Indicator
-  - Screenshot Window Sizer
-  - Window List
-  - Workspace Indicator
 
 2. WhiteSur Theme
 
