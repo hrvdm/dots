@@ -238,5 +238,8 @@ I just use the Gsuite or obsidian, so this is wasted space.
 
 Download the icon you want. I use the one under the kitty folder in this repos .config
 
-Update the `Icon=` path in the kitty.desktop file:
-- `sudo nano ~/.local/share/applications/kitty.desktop`
+Create a kitty.desktop file, or use the one included in this repo:
+- `sudo nano /usr/share/applications/kitty.desktop`
+
+Update the `Icon=` path in the kitty.desktop file.
+
