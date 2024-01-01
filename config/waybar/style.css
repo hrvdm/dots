@@ -1,0 +1,200 @@
+* {
+  font-family: Material Design Icons, Iosevka Nerd Font;
+  font-size: 15px;
+  border: none;
+  margin: 2px 0 0 0;
+  border-radius: 8px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  color: #c0caf5;
+}
+
+@keyframes blink {
+  to {
+    background-color: #101012;
+    color: #abb2bf;
+  }
+}
+
+window#waybar {
+  background-color: transparent;
+  transition-property: background-color;
+  transition-duration: 0.5s;
+  margin-bottom: 0px;
+}
+
+tooltip {
+  border-radius: 15px;
+  padding: 15px;
+}
+
+tooltip label {
+  padding: 5px;
+}
+
+#custom-launcher {
+  background-color: #101012;
+
+  font-size: 18.5px;
+
+  padding-right: 16px;
+  padding-left: 10px;
+
+  margin-left: 4px;
+  margin-right: 4px;
+}
+
+#clock {
+  font-weight: bold;
+}
+
+#battery {
+  border-radius: 8px;
+  font-size: 18px;
+
+  padding-right: 2px;
+  padding-left: 8px;
+}
+
+#battery.critical,
+#battery.warning,
+#battery.full,
+#battery.plugged {
+  padding-left: 8px;
+  padding-right: 12px;
+}
+
+#battery.charging {
+  padding-left: 10px;
+  padding-right: 12px;
+}
+
+#battery.warning {
+  color: #ecd3a0;
+}
+
+#battery.critical:not(.charging) {
+  color: #fb958b;
+}
+
+#workspaces {
+  background-color: #101012;
+  font-size: 22px;
+  padding-bottom: 6px;
+  padding-left: 4px;
+  padding-right: 4px;
+}
+
+#workspaces button {
+  color: #787c99;
+  box-shadow: inset 0 -3px transparent;
+
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button.active {
+  transition: all 0.5s cubic-bezier(0.55, -0.68, 0.48, 1.68);
+}
+
+#workspaces button:hover {
+  background-color: transparent;
+  box-shadow: inherit;
+  text-shadow: inherit;
+  background: none;
+}
+
+#tray {
+  margin-right: 8px;
+  font-size: 30px;
+}
+
+#tray > .passive {
+  -gtk-icon-effect: dim;
+}
+
+#tray > .needs-attention {
+  -gtk-icon-effect: highlight;
+  background-color: #eb4d4b;
+}
+
+#pulseaudio {
+  padding-left: 9px;
+  font-size: 22px;
+}
+
+#pulseaudio#microphone {
+  padding-left: 9px;
+  font-size: 22px;
+}
+
+#bluetooth {
+  padding-left: 9px;
+  font-size: 22px;
+}
+
+#pulseaudio.muted {
+  color: #fb958b;
+  padding-left: 9px;
+  font-size: 22px;
+}
+
+#pulseaudio#microphone.source-muted {
+  color: #fb958b;
+  padding-left: 9px;
+  font-size: 22px;
+}
+
+#backlight {
+  background-color: #101012;
+  font-size: 21.2px;
+
+  border-top-left-radius: 0px;
+  border-bottom-left-radius: 0px;
+
+  padding-left: 10px;
+  padding-right: 18px;
+}
+
+#network {
+  background-color: #101012;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+
+  font-size: 20px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}
+
+#network.disconnected {
+  color: #fb958b;
+}
+
+#clock,
+#battery,
+#cpu,
+#memory,
+#tray {
+  background-color: #101012;
+
+  border-radius: 8px;
+  font-size: 18.5px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+
+  margin-left: 6px;
+  margin-right: 6px;
+}
+
+#pulseaudio,
+#pulseaudio#microphone,
+#bluetooth {
+  border-radius: 0px;
+  background-color: #101012;
+
+  font-size: 20px;
+
+  padding-left: 10px;
+  padding-right: 10px;
+}

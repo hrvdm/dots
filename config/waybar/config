@@ -1,0 +1,29 @@
+{
+    "include": [
+        "~/.config/waybar/modules"
+    ],
+    "height": 32,
+    "layer": "top",
+    "output": "eDP-1",
+    "margin-left": 20,
+    "margin-right": 20,
+    "margin-bottom": 5,
+    "modules-left": [
+        "custom/launcher",
+        "clock",
+        "battery",
+        "cpu",
+        "memory"
+    ],
+    "modules-center": [
+        "hyprland/workspaces"
+    ],
+    "modules-right": [
+        "tray",
+        "network",
+        "pulseaudio",
+        "pulseaudio#microphone",
+        "bluetooth",
+        "backlight"
+    ]
+}

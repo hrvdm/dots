@@ -1,0 +1,115 @@
+{
+  "clock": {
+    "format": "{:%H:%M}",
+    "format-alt": "{:%b %d %Y}",
+    "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>"
+  },
+  "battery": {
+    "interval": 60,
+    "align": 0,
+    "rotate": 0,
+    "full-at": 100,
+    "design-capacity": false,
+    "states": {
+      "good": 90,
+      "warning": 30,
+      "critical": 15
+    },
+    "format": "{icon}  {capacity}%",
+    "format-alt": "{icon}  {time}",
+    "format-charging": "  {capacity}%",
+    "format-plugged": "  {capacity}%",
+    "format-full": "{icon}  Full",
+    "format-icons": [
+      " ",
+      " ",
+      " ",
+      " ",
+      " "
+    ],
+    "format-time": "{H}h {M}min",
+    "tooltip": true
+  },
+  "cpu": {
+    "interval": 20,
+    "format": "  {}%",
+    "max-length": 10,
+    "on-click": ""
+  },
+  "memory": {
+    "interval": 30,
+    "format": "  {used:0.1f}GB",
+    "format-alt": "  {}%",
+    "max-length": 10
+  },
+  "hyprland/workspaces": {
+    "format": "{icon}",
+    "format-icons": {
+      "active": "󰮯",
+      "default": ""
+    }
+  },
+  "tray": {
+    "spacing": 10
+  },
+  "backlight": {
+    "device": "intel_backlight",
+    "format": "{icon}",
+    "tooltip-format": "{percent}",
+    "format-icons": [
+      "󱩎",
+      "󱩏",
+      "󱩐",
+      "󱩑",
+      "󱩒",
+      "󱩓",
+      "󱩔",
+      "󱩕",
+      "󱩖",
+      "󰛨"
+    ]
+  },
+  "network": {
+    "format-wifi": "{icon}",
+    "format-ethernet": "",
+    "format-disconnected": "󰤮",
+    "tooltip-format": "{essid}",
+    "on-click": "kitty --class nmtui nmtui",
+    "format-icons": [
+      "󰤯",
+      "󰤟",
+      "󰤢",
+      "󰤥",
+      "󰤨"
+    ]
+  },
+  "pulseaudio": {
+    "format": "{icon}",
+    "format-muted": "婢",
+    "format-icons": {
+      "default": [
+        "",
+        "",
+        ""
+      ]
+    },
+    "on-click": "pavucontrol &"
+  },
+  "pulseaudio#microphone": {
+    "format": "{format_source}",
+    "format-source": "",
+    "format-source-muted": ""
+  },
+  "bluetooth": {
+    "format": "<span></span>",
+    "format-disabled": "",
+    "on-click": "bash ~/.config/waybar/scripts/rofi-bluetooth",
+    "format-connected": "<span></span> {num_connections} {device_battery_percentage}%",
+    "tooltip-format": "{device_enumerate}",
+    "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
+  },
+  "custom/launcher": {
+    "format": "",
+    "on-click": "sudo ~/.config/rofi/powermenu/menu.sh"
+  }
+}

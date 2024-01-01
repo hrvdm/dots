@@ -1,0 +1,32 @@
+key_color = "#e3a659"
+separator_color = "#e3a659"
+
+[custom_ascii]
+path = "~/.config/macchina/ascii/Hlogo"
+color = "#ae82ff"
+
+[palette]
+type = "Full"
+visible = false
+
+[keys]
+host            = "💻"
+kernel          = "Kernel"
+battery         = "Battery"
+os              = "OS"
+de              = "DE"
+wm              = "WM"
+distro          = "💿"
+terminal        = "Terminal"
+shell           = "🐚"
+packages        = "📦"
+uptime          = "Uptime"
+memory          = "🧠"
+machine         = "Machine"
+local_ip        = "Local IP"
+backlight       = "Brightness"
+resolution      = "Resolution"
+cpu_load        = "⚡"
+cpu             = "CPU"
+gpu             = "💳"
+disk_space      = "Disk Space"
