@@ -1,24 +1,20 @@
 plugins=(
   git 
-  zsh-autosuggestions 
-  zsh-syntax-highlighting
-  fast-syntax-highlighting
 )
 
 export STARSHIP_CONFIG=~/.config/starship.toml
 eval "$(starship init zsh)"
 
 export PATH="${PATH}:${HOME}/.local/bin/"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH=$PATH:~/.cargo/bin/
+
 export ANDROID_HOME=$HOME/Android/Sdk
 export PATH=$PATH:$ANDROID_HOME/emulator
 export PATH=$PATH:$ANDROID_HOME/platform-tools
 
 export REACT_EDITOR=code
 export NVM_DIR="$HOME/.nvm"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export macchina="/usr/bin/macchina"
-
-alias neofetch=macchina
 
 eval "$(rbenv init -)"
 

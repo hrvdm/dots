@@ -6,14 +6,15 @@
 right_format = """Last run: $character$cmd_duration"""
 
 format = '''
-[$time](bold red) $directory $nodejs$python$rust$golang$git_branch$git_status
-[➜](bold yellow) '''
+$time $directory $nodejs$python$rust$golang$git_branch$git_status
+[➜](bold #e0af68) '''
 
 [character]
-error_symbol = "[✖](bold red) "
-success_symbol = '[✔](bold green)'
+error_symbol = "[✖](bold #f7768e) "
+success_symbol = '[✔](bold #7dcfff)'
 
 [cmd_duration]
+style = "bold #e0af68"
 min_time = 1
 format = "[$duration]($style)"
 
@@ -23,8 +24,9 @@ format = '[$localipv4](bold red) '
 disabled = false
 
 [time]
+style = "bold #c0caf5"
 time_format = "%T"
-format = "$time"
+format = "[$time]($style)"
 disabled = false
 
 [username]
@@ -32,24 +34,25 @@ show_always = true
 format = '[$user]($style) '
 
 [directory]
+style = "bold #73daca"
 format = '[$path]($style)[$read_only]($read_only_style)'
 
 [git_branch]
 format = "on [$symbol$branch]($style) "
 symbol = "🌿 "
-style = "bold yellow"
+style = "bold #e0af68"
 
 [git_status]
 conflicted = "⚔️ "
-ahead = "🏎️ 💨 ×${count}"
-behind = "🐢 ×${count}"
-diverged = "🔱 🏎️ 💨 ×${ahead_count} 🐢 ×${behind_count}"
-untracked = "🛤️ ×${count}"
+ahead = "🏎️ 💨×${count} "
+behind = "🐢×${count} "
+diverged = "🔱 🏎️ 💨×${ahead_count} 🐢×${behind_count} "
+untracked = "🛤️×${count} "
 stashed = "📦 "
-modified = "📝 ×${count}"
-staged = "🗃️  ×${count}"
-renamed = "📛 ×${count}"
-deleted = "🗑️  ×${count}"
+modified = "📝×${count} "
+staged = "🗃️ ×${count} "
+renamed = "📛×${count} "
+deleted = "🗑️×${count} "
 style = "bright-white"
 format = "$all_status$ahead_behind"
 
@@ -59,12 +62,12 @@ style = "bold"
 
 [python]
 format = "[$symbol$version]($style) "
-style = "bold green"
+style = "bold #7dcfff"
 
 [rust]
 format = "[$symbol$version]($style) "
-style = "bold green"
+style = "bold #7dcfff"
 
 [golang]
 format = "[$symbol$version]($style) "
-style = "bold green"
+style = "bold #7dcfff"
