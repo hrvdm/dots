@@ -34,7 +34,7 @@ sudo pacman -S hyprland xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez b
 ```
 
 ```
-yay -S rbenv waybar-hyprland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd ttf-font-awesome ttf-material-icons-git ttf-jetbrains-mono-nerd wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin
+yay -S rbenv eww-wayland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd  noto-fonts-emoji ttf-jetbrains-mono wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin
 ```
 
 Install [oh-my-zsh](https://ohmyz.sh/#install)
@@ -238,7 +238,7 @@ Even if you do not plan to use `vim`, you need it for `visudo`. You can change t
 
 - **Run pacstrap:**
 
-  `pacstrap -K /mnt base linux linux-firmware openssh git vim sudo nano networkmanager lvm2 reflector ufw base-devel rust`
+  `pacstrap -K /mnt base linux linux-firmware openssh git vim sudo nano networkmanager lvm2 reflector ufw base-devel rustup`
 
 ### Generate fstab
 
