@@ -12,5 +12,4 @@ show = [
   "Distribution",
   "Shell",
   "Packages",
-  "GPU",
 ]

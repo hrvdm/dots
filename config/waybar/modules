@@ -103,13 +103,13 @@
   "bluetooth": {
     "format": "<span></span>",
     "format-disabled": "",
-    "on-click": "bash ~/.config/waybar/scripts/rofi-bluetooth",
+    "on-click": "",
     "format-connected": "<span></span> {num_connections} {device_battery_percentage}%",
     "tooltip-format": "{device_enumerate}",
     "tooltip-format-enumerate-connected": "{device_alias}   {device_address}"
   },
   "custom/launcher": {
     "format": "",
-    "on-click": "sudo ~/.config/rofi/powermenu/menu.sh"
+    "on-click": ""
   }
 }

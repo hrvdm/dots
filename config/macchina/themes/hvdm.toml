@@ -1,10 +1,6 @@
 key_color = "#e3a659"
 separator_color = "#e3a659"
 
-[custom_ascii]
-path = "~/.config/macchina/ascii/Hlogo"
-color = "#ae82ff"
-
 [palette]
 type = "Full"
 visible = false
