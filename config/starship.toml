@@ -6,7 +6,7 @@
 right_format = """Last run: $character$cmd_duration"""
 
 format = '''
-$time $directory $nodejs$python$rust$golang$git_branch$git_status
+$time $directory$nodejs$python$rust$golang$git_branch$git_status
 [➜](bold #e0af68) '''
 
 [character]
