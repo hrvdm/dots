@@ -34,7 +34,7 @@ sudo pacman -S hyprland xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez b
 ```
 
 ```
-yay -S rbenv eww-wayland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd  noto-fonts-emoji ttf-jetbrains-mono wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin neovim
+yay -S rbenv eww-wayland swww rofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd  noto-fonts-emoji ttf-jetbrains-mono wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin neovim
 ```
 
 Install [oh-my-zsh](https://ohmyz.sh/#install)
