@@ -1,0 +1,15 @@
+#!/bin/sh
+
+disk() {
+	df --output=pcent . | tail -n 1 | tr -d '[:space:]|%'
+}
+
+memory() {
+	printf "%.0f\n" $(free -m | grep Mem | awk '{print ($3/$2)*100}')
+}
+
+cputemp() {
+  sensors | grep "Package id 0:" | grep -o '[0-9]*\.[0-9]*' | head -n 1
+}
+
+"$@"

@@ -1,0 +1,38 @@
+;; Polls
+
+(defpoll calendar_day :interval "4h" "date '+%d'")
+(defpoll calendar_year :interval "4h" "date '+%Y'")
+(defpoll date :interval "4h" "date '+%A, %d %b'")
+(defpoll time
+  :interval "20s"
+  :initial "initial-value" 
+  `date +%H:%M' '%P`
+)
+
+(defpoll disk :interval "30m" "~/.config/eww/src/scripts/system disk")
+(defpoll memory :interval "60s" "~/.config/eww/src/scripts/system memory")
+(defpoll cputemp :interval "60s" "~/.config/eww/src/scripts/system cputemp")
+
+(defpoll battery 
+  :interval "20s" 
+  :initial "" 
+  "~/.config/eww/src/scripts/battery battery"
+)
+
+(defpoll batteryIcon 
+  :interval "20s"
+  :initial "" 
+  "~/.config/eww/src/scripts/battery batteryIcon"
+)
+
+(defpoll networkName 
+  :interval "20s"
+  :initial "" 
+  "~/.config/eww/src/scripts/network networkName"
+)
+
+(defpoll networkIcon 
+  :interval "20s"
+  :initial "󰤯" 
+  "~/.config/eww/src/scripts/network networkIcon"
+)

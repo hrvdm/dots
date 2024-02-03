@@ -1,0 +1,20 @@
+(defwidget calendar-menu []
+	(box :orientation "v"
+	(box
+	(calendar 
+		:day calendar_day 
+		:year calendar_year
+      )
+    )
+  )
+)
+
+(defwindow calendar
+  :monitor 0
+  :class "calendar"
+	:geometry (geometry 
+		:width "15%" 
+		:height "15%" 
+    )
+  (calendar-menu)
+)

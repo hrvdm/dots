@@ -1,0 +1,3 @@
+;; Listeners
+
+(deflisten currentWorkspace :initial "󰥟" "~/.config/eww/src/scripts/currentWorkspace")

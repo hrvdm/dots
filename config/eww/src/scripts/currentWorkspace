@@ -1,0 +1,11 @@
+#!/bin/sh
+
+# Listen to the socket and process its output
+socat -u UNIX-CONNECT:/tmp/hypr/$HYPRLAND_INSTANCE_SIGNATURE/.socket2.sock - | \
+stdbuf -o0 awk -F '>>|,' \
+-e '/^workspace>>/ || /^focusedmon>>/ { 
+      cmd="hyprctl workspaces -j | jq -r '\''map({key: (.id | tostring), value: .windows}) | from_entries | keys | .[-1]'\''";
+      cmd | getline totalWorkspaces;
+      close(cmd);
+      print ($2 != "" ? $2 : $3) " / " totalWorkspaces
+    }'
