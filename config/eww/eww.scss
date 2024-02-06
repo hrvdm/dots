@@ -1,5 +1,4 @@
-@import './src/scss/colors.scss';
-@import './src/scss/widgets.scss';
+@import './scss/widgets.scss';
 
 /** General **/
 
@@ -9,25 +8,4 @@
   font-family: JetBrains Mono;
   font-weight: 600;
   color: $white;
-}
-
-/** Bar Basics **/
-
-.bar-class {
-  border-radius: 16px;
-}
-
-.right-modules,
-.center-modules,
-.left-modules,
-.left-outer-class,
-.left-inner-class,
-.right {
-  border-radius: 16px;
-  padding: 4px 6px 4px 6px;
-  background-color: $background;
-}
-
-.left-outer-class {
-  margin-right: 8px;
 }

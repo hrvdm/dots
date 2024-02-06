@@ -425,3 +425,6 @@ sudo systemctl enable fstrim.timer --now
 #### [sameemul-haque](https://github.com/sameemul-haque/dotfiles)
 
 #### [rxyhn](https://github.com/rxyhn/yoru)
+
+TODO:
+Add https://asciinema.org/a/37390

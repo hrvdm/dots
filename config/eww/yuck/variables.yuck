@@ -1,0 +1,6 @@
+(defvar music_reveal false)
+(defvar vol_reveal false)
+(defvar br_reveal false)
+(defvar control_reveal false)
+(defvar wifi_rev false)
+(defvar time_rev false)

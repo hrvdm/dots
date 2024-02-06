@@ -1,0 +1,12 @@
+#!/bin/bash
+
+focusmon=$(hyprctl monitors -j | jq -r '.[] | select(.focused == true) | .id')
+
+if [[ ! $(pidof eww) ]]; then
+    eww daemon
+    sleep 1
+fi
+
+hyprctl dispatch focusmonitor "$focusmon"
+
+eww open bar

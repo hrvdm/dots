@@ -1,5 +1,6 @@
-(include "./src/yuck/_polls.yuck")
-(include "./src/yuck/_listeners.yuck")
-(include "./src/yuck/_powermenu.yuck")
-(include "./src/yuck/_bar.yuck")
-(include "./src/yuck/_calendar.yuck")
+(include "./yuck/variables.yuck")
+(include "./yuck/polls.yuck")
+
+(include "./yuck/bar/bar.yuck")
+(include "./yuck/bar/layout.yuck")
+
