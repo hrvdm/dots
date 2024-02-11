@@ -1,5 +1,5 @@
 (defwindow bar
-  :monitor 1
+  :monitor 0
   :exclusive true
   :geometry (geometry
     :width "100%"
@@ -7,12 +7,7 @@
   :anchor "top center")
   :stacking "fg"
   :windowtype "dock"
-  (bar_layout)
-)
-
-(defwidget bar_layout []
   (centerbox
-    :class "bar_class"
     :orientation "h"
     (left)
     (center)
@@ -22,32 +17,38 @@
 
 (defwidget left []
   (box
+    :class "bar-base"
     :orientation "h"
     :space-evenly false
     :halign "start"
-    (launcher)
+    (launcher-icon)
     (sep)
-    (workspaces)
+    (date-time-module)
   )
 )
 
 (defwidget center []
   (box
+    :class "bar-base"
     :orientation "h"
     :space-evenly false
     :halign "center"
-    :class "center_modules"
-    (clock_module)
+    (workspaces)
   )
 )
 
 (defwidget right []
   (box
+    :class "bar-base"
     :orientation "h"
     :space-evenly false
     :halign "end"
+    (gpu-icon)
     (sep)
-    (mem)
+    (cpu-icon)
     (sep)
+    (memory-icon)
+    (sep)
+    (storage-icon)
   )
 )

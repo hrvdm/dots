@@ -1,15 +1,34 @@
 #!/bin/sh
 
-disk() {
+#
+# Adjust the names of the sensors - they are probably different for you
+#
+# Run:
+# sudo sensors-detect
+#
+
+GPU_SENSOR="amdgpu-pci-0d00"
+
+CPU_SENSOR="k10temp-pci-00c3"
+
+memory_percent_used() {
+	free | grep Mem | awk '{print int(($3/$2 * 100.0) + 0.5)}'
+}
+
+storage_percent_used() {
 	df --output=pcent . | tail -n 1 | tr -d '[:space:]|%'
 }
 
-memory() {
-	printf "%.0f\n" $(free -m | grep Mem | awk '{print ($3/$2)*100}')
+cpu_temp() {
+	sensors "$CPU_SENSOR" | grep 'Tctl:' | awk '{print $2}' | cut -c2-
 }
 
-cputemp() {
-  sensors | grep "Package id 0:" | grep -o '[0-9]*\.[0-9]*' | head -n 1
+gpu_temp() {
+	sensors "$GPU_SENSOR" | grep 'mem:' | awk '{print $2}' | cut -c2-
+}
+
+gpu_psu_draw() {
+	sensors "$GPU_SENSOR" | grep 'PPT:' | awk '{print $2}'
 }
 
 "$@"

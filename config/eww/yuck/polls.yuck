@@ -1,25 +1,22 @@
 ; Date / Time Polls
 
-(defpoll calendar_day :interval "4h" "date '+%d'")
-(defpoll calendar_year :interval "4h" "date '+%Y'")
-(defpoll date :interval "4h" "date '+%A, %d %b'")
+(defpoll date :interval "10m" "date '+%A, %d %b'")
 (defpoll time
-  :interval "20s"
+  :interval "10s"
   :initial "initial-value" 
   `date +%H:%M' '%P`
 )
 
-; Media Polls
+; System Stats
 
-(defpoll song	:interval "5s"  "../scripts/music title")
-(defpoll song_artist :interval "5s"  "../scripts/music artist")
-(defpoll song_status :interval "5s"  "../scripts/music status")
-(defpoll song_perc :interval "1s"  "../scripts/music percent")
-(defpoll cover_art :interval "5s"  "../scripts/music coverloc")
-(defpoll playpause :interval "1s"  "../scripts/music statusicon")
-(defpoll player_volume :interval "5s"  'bc <<< "$(playerctl volume)*100"')
+(defpoll memory-percent :initial 0 :interval "2m" "./scripts/system memory_percent_used")
+(defpoll disk-percent :initial 0 :interval "5m" "./scripts/system storage_percent_used")
 
+(defpoll cpu-temp :initial 0 :interval "1m" "./scripts/system cpu_temp")
+(defpoll gpu-temp :initial 0 :interval "1m" "./scripts/system gpu_temp")
+
+(defpoll gpu-psu-draw :initial 0 :interval "1m" "./scripts/system gpu_psu_draw")
 
 ; Workspaces Listener
 
-(deflisten workspace "./scripts/workspace")
+(deflisten workspace "./scripts/currentWorkspace")

@@ -1,54 +1,91 @@
-;; widgets
+; Left
 
-(defwidget launcher []
+(defwidget launcher-icon []
   (box
-    :class "launcher_module"
+    :class "launcher-module"
     :orientation "h"
     (button
       :onclick ""
-      (label :text "󰣇" )
+      (image :path launcher_photo_path :image-width 35 :image-height 35)
     )
   )
 )
 
-(defwidget workspaces []
-  (literal
-    :content workspace
-  :valign "center")
+(defwidget date-time-module []
+  (box
+    :space-evenly "false"
+    :orientation "h"
+    (label
+    :text "${date} ${time}"
+    :class "clock-time-class"
+    )
+  )
 )
 
-(defwidget mem []
+; Center
+
+(defwidget workspaces []
+  (label
+    :class "workspaces-module"
+    :valign "center"
+    :text workspace
+  )
+)
+
+; Right
+
+(defwidget memory-icon []
   (box
-    :class "mem_module"
+    :class "memory-module"
+    (label
+      :text "  ${memory-percent}%"
+    )
+  )
+)
+
+(defwidget cpu-icon []
+  (box
+    :class "cpu-module"
+    :vexpand "false"
+    :hexpand "false"
+    (label
+      :text "  ${cpu-temp}"
+    )
+  )
+)
+
+(defwidget gpu-icon []
+  (box
+    :class "gpu-module"
+    :vexpand "false"
+    :hexpand "false"
+    (label
+      :text "  ${gpu-temp} @ ${gpu-psu-draw}w"
+    )
+  )
+)
+
+(defwidget storage-icon []
+  (box
+    :class "storage-module"
     :vexpand "false"
     :hexpand "false"
     (circular-progress
-      :value {EWW_RAM.used_mem_perc}
-      :class "membar"
+      :value disk-percent
+      :class "storage-circle"
       :thickness 4
       (button
-        :onclick "scripts/pop system"
-        :class "iconmem"
-        :tooltip "using ${EWW_RAM.used_mem_perc}% ram"
+        :tooltip "${disk-percent}% Used"
       "")
+    )
+    (label
+      :class "storage-module-label"
+      :text "  ${disk-percent}%"
     )
   )
 )
 
-(defwidget clock_module []
-  (eventbox
-    :onhover "eww update time_rev=true"
-    :onhoverlost "eww update time_rev=false"
-    (box
-      :space-evenly "false"
-      :orientation "h"
-      (label
-      :text "${time}"
-      :class "clock_time_class"
-      )
-    )
-  )
-)
+; Other
 
 (defwidget sep []
   (box
@@ -56,69 +93,9 @@
     :hexpand "false"
     :valign "center"
     (label
-      :class "separ"
+      :class "vertical-sep"
       :valign "center"
       :text "|"
     )
   )
 )
-
-(defwidget gap []
-  (box
-    :orientation "h"
-    :hexpand "false"
-    :visible "true"
-  :width "150")
-)
-  
-  ;;Define System widget
-  (defwidget system []
-    (box
-      :class "sys_win"
-      :orientation "v"
-      :space-evenly "false"
-      :hexpand "false"
-      :vexpand "false"
-      :spacing 0
-      (label
-        :text "____________________________________"
-        :class "sys_sep"
-      :halign "center")
-      (box
-        :class "sys_mem_box"
-        :orientation "h"
-        :space-evenly "false"
-        :halign "start"
-        (circular-progress
-          :value {EWW_RAM.used_mem_perc}
-          :class "sys_mem"
-          :thickness 9
-          (label
-            :text ""
-            :class "sys_icon_mem"
-            :limit-width 2
-          :angle 0.0))
-        (box
-          :orientation "v"
-          :space-evenly "false"
-          :spacing 0
-          :hexpand "false"
-          :vexpand "false"
-          (label
-            :text "memory"
-            :halign "start"
-            :class "sys_text_mem"
-            :limit-width 9)
-          (label
-            :text "${round((EWW_RAM.used_mem/(1024*1024*1024)), 2)} | ${round((EWW_RAM.total_mem/(1024*1024*1024)), 2)}gb"
-            :halign "start"
-            :class "sys_text_mem_sub"
-            :limit-width 22)
-          (label :text "${round((EWW_RAM.available_mem/(1024*1024*1024)), 2)}gb free"
-            :halign "start"
-            :class "sys_text_mem_sub"
-            :limit-width 22)
-        )
-      )
-    )
-  )

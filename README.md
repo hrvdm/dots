@@ -43,6 +43,12 @@ Install [oh-my-zsh](https://ohmyz.sh/#install)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
+and the [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) plugin:
+
+```bash
+git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
+```
+
 Install [starship](https://starship.rs/)
 
 ```bash
@@ -425,6 +431,3 @@ sudo systemctl enable fstrim.timer --now
 #### [sameemul-haque](https://github.com/sameemul-haque/dotfiles)
 
 #### [rxyhn](https://github.com/rxyhn/yoru)
-
-TODO:
-Add https://asciinema.org/a/37390

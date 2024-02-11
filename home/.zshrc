@@ -1,5 +1,6 @@
 plugins=(
-  git 
+  git
+  zsh-autosuggestions 
 )
 
 export STARSHIP_CONFIG=~/.config/starship.toml
@@ -20,5 +21,3 @@ eval "$(rbenv init -)"
 
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"
-
-macchina
