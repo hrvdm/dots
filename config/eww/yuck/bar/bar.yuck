@@ -49,7 +49,7 @@
     :vexpand "false"
     :hexpand "false"
     (label
-      :text "  ${cpu-temp}"
+      :text "${cpu-temp}"
     )
   )
 )
@@ -60,7 +60,18 @@
     :vexpand "false"
     :hexpand "false"
     (label
-      :text "  ${gpu-temp} @ ${gpu-psu-draw}w"
+      :text "${gpu-psu-draw}"
+    )
+  )
+)
+
+(defwidget battery-icon []
+  (box
+    :class "battery-module"
+    :vexpand "false"
+    :hexpand "false"
+    (label
+      :text "${battery-icon}  ${battery-percent}%"
     )
   )
 )

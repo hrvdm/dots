@@ -8,27 +8,49 @@
 #
 
 GPU_SENSOR="amdgpu-pci-0d00"
-
 CPU_SENSOR="k10temp-pci-00c3"
 
 memory_percent_used() {
-	free | grep Mem | awk '{print int(($3/$2 * 100.0) + 0.5)}'
+    local mem_info=$(free | grep Mem)
+
+    if [[ -n "$mem_info" ]]; then
+        awk -v total=$(awk '{print $2}' <<<"$mem_info") \
+            -v used=$(awk '{print $3}' <<<"$mem_info") \
+            'BEGIN {printf "%d\n", (used / total * 100)}'
+    fi
 }
 
 storage_percent_used() {
-	df --output=pcent . | tail -n 1 | tr -d '[:space:]|%'
+    local storage_info=$(df --output=pcent . | tail -n 1)
+
+    if [[ -n "$storage_info" ]]; then
+        echo "${storage_info//[%[:space:]]/}"
+    fi
 }
 
 cpu_temp() {
-	sensors "$CPU_SENSOR" | grep 'Tctl:' | awk '{print $2}' | cut -c2-
+    local cpu_temp=$(sensors "$CPU_SENSOR" | grep 'Tctl:' | awk '{print $2}' | cut -c2-)
+
+    if [[ -n "$cpu_temp" ]]; then
+        echo "  ${cpu_temp}"
+    fi
 }
 
 gpu_temp() {
-	sensors "$GPU_SENSOR" | grep 'mem:' | awk '{print $2}' | cut -c2-
+    local gpu_temp=$(sensors "$GPU_SENSOR" | grep 'mem:' | awk '{print $2}' | cut -c2-)
+
+    if [[ -n "$gpu_temp" ]]; then
+        echo "  ${gpu_temp}"
+    fi
 }
 
 gpu_psu_draw() {
-	sensors "$GPU_SENSOR" | grep 'PPT:' | awk '{print $2}'
+    local gpu_temp=$(gpu_temp)
+    local psu_draw=$(sensors "$GPU_SENSOR" | grep 'PPT:' | awk '{print $2}')
+
+    if [[ -n "$gpu_temp" && -n "$psu_draw" ]]; then
+        echo "  $gpu_temp @ $psu_draw w"
+    fi
 }
 
 "$@"

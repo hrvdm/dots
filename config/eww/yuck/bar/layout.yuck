@@ -44,11 +44,9 @@
     :space-evenly false
     :halign "end"
     (gpu-icon)
-    (sep)
     (cpu-icon)
-    (sep)
     (memory-icon)
-    (sep)
     (storage-icon)
+    (battery-icon)
   )
 )

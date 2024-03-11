@@ -9,13 +9,17 @@
 
 ; System Stats
 
-(defpoll memory-percent :initial 0 :interval "2m" "./scripts/system memory_percent_used")
 (defpoll disk-percent :initial 0 :interval "5m" "./scripts/system storage_percent_used")
 
-(defpoll cpu-temp :initial 0 :interval "1m" "./scripts/system cpu_temp")
-(defpoll gpu-temp :initial 0 :interval "1m" "./scripts/system gpu_temp")
+(defpoll memory-percent :initial 0 :interval "1m" "./scripts/system memory_percent_used")
 
-(defpoll gpu-psu-draw :initial 0 :interval "1m" "./scripts/system gpu_psu_draw")
+(defpoll cpu-temp :interval "1m" "./scripts/system cpu_temp")
+(defpoll gpu-temp :interval "1m" "./scripts/system gpu_temp")
+
+(defpoll gpu-psu-draw :interval "1m" "./scripts/system gpu_psu_draw")
+
+(defpoll battery-percent :initial 0 :interval "1m" "./scripts/battery battery")
+(defpoll battery-icon :initial 0 :interval "1m" "./scripts/battery batteryIcon")
 
 ; Workspaces Listener
 
