@@ -30,23 +30,17 @@ git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 Install packages:
 
 ```
-sudo pacman -S hyprland xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez bluez-utils pulseaudio pulseaudio-bluetooth dunst pipewire wireplumber polkit-kde-agent ly socat jq
+sudo pacman -S hyprland xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez bluez-utils pulseaudio pulseaudio-bluetooth dunst pipewire wireplumber polkit polkit-kde-agent ly socat jq
 ```
 
 ```
-yay -S rbenv eww-wayland swww rofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd  noto-fonts-emoji ttf-jetbrains-mono wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin neovim apple-fonts
+yay -S rbenv eww-wayland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd  noto-fonts-emoji ttf-jetbrains-mono wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin neovim apple-fonts
 ```
 
 Install [oh-my-zsh](https://ohmyz.sh/#install)
 
 ```bash
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
-```
-
-and the [zsh-autosuggestions](https://github.com/zsh-users/zsh-autosuggestions) plugin:
-
-```bash
-git clone https://github.com/zsh-users/zsh-autosuggestions ${ZSH_CUSTOM:-~/.oh-my-zsh/custom}/plugins/zsh-autosuggestions
 ```
 
 Install [starship](https://starship.rs/)
