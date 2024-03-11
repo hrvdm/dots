@@ -30,11 +30,11 @@ git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 Install packages:
 
 ```
-sudo pacman -S hyprland xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez bluez-utils pulseaudio pulseaudio-bluetooth dunst pipewire wireplumber polkit polkit-kde-agent ly socat jq
+sudo pacman -S hyprland hyprlock-git xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez bluez-utils pulseaudio pulseaudio-bluetooth dunst pipewire wireplumber polkit polkit-kde-agent socat jq xorg-xev
 ```
 
 ```
-yay -S rbenv eww-wayland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd  noto-fonts-emoji ttf-jetbrains-mono wl-clipboard hyprpicker-git ttf-nerd-fonts-symbols visual-studio-code-bin neovim apple-fonts
+yay -S rbenv eww-wayland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd noto-fonts-emoji ttf-jetbrains-mono ttf-nerd-fonts-symbols wl-clipboard hyprpicker-git visual-studio-code-bin
 ```
 
 Install [oh-my-zsh](https://ohmyz.sh/#install)
