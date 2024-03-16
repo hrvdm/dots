@@ -47,6 +47,6 @@
     (cpu-icon)
     (memory-icon)
     (storage-icon)
-    (battery-icon)
+    (battery)
   )
 )

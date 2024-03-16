@@ -1,0 +1,53 @@
+#!/bin/sh
+
+BAT=$(ls /sys/class/power_supply | grep BAT | head -n 1)
+
+battery() {
+    local batteryLevel
+    local BAT="/sys/class/power_supply/${BAT}/capacity"
+
+    batteryLevel=$(cat "$BAT" 2>/dev/null) || {
+        exit 1
+    }
+
+    echo "$batteryLevel"
+}
+
+
+isBatteryCharging() {
+    cat /sys/class/power_supply/${BAT}/status
+}
+
+batteryStatus() {
+    batteryLevel=$(battery)
+    isCharging=$(isBatteryCharging)
+
+    if [ "$isCharging" = "Charging" ]; then
+        echo "󰄌"  # Charging
+        return
+    fi
+
+if [ -z "$batteryLevel" ]; then
+    exit 0
+elif [ "$batteryLevel" -gt 85 ]; then
+    echo " ${batteryLevel}%"  # Full battery icon
+    exit 0
+elif [ "$batteryLevel" -gt 75 ]; then
+    echo " ${batteryLevel}%"  # 3/4 battery icon
+    exit 0
+elif [ "$batteryLevel" -gt 50 ]; then
+    echo " ${batteryLevel}%"  # 1/2 battery icon
+    exit 0
+elif [ "$batteryLevel" -gt 10 ]; then
+    echo " ${batteryLevel}%"  # Low battery icon
+    exit 0
+else
+    echo "󰂑 ${batteryLevel}%"  # Empty battery icon
+    exit 0
+fi
+
+
+}
+
+
+"$@"

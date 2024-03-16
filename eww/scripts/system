@@ -40,7 +40,7 @@ gpu_temp() {
     local gpu_temp=$(sensors "$GPU_SENSOR" | grep 'mem:' | awk '{print $2}' | cut -c2-)
 
     if [[ -n "$gpu_temp" ]]; then
-        echo "  ${gpu_temp}"
+        echo " ${gpu_temp}"
     fi
 }
 
@@ -49,7 +49,7 @@ gpu_psu_draw() {
     local psu_draw=$(sensors "$GPU_SENSOR" | grep 'PPT:' | awk '{print $2}')
 
     if [[ -n "$gpu_temp" && -n "$psu_draw" ]]; then
-        echo "  $gpu_temp @ $psu_draw w"
+        echo " $gpu_temp @ $psu_draw w"
     fi
 }
 

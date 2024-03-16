@@ -65,13 +65,13 @@
   )
 )
 
-(defwidget battery-icon []
+(defwidget battery []
   (box
     :class "battery-module"
     :vexpand "false"
     :hexpand "false"
     (label
-      :text "${battery-icon}  ${battery-percent}%"
+      :text "${battery}"
     )
   )
 )
