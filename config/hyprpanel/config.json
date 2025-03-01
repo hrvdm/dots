@@ -1,0 +1,67 @@
+{
+  "bar.customModules.updates.pollingInterval": 1440000,
+  "theme.font.name": "Source Code Pro",
+  "theme.font.label": "Source Code Pro",
+  "theme.font.size": "1.1rem",
+  "theme.bar.scaling": 100,
+  "theme.bar.floating": false,
+  "bar.workspaces.show_icons": false,
+  "bar.workspaces.show_numbered": true,
+  "bar.workspaces.showWsIcons": false,
+  "bar.battery.label": false,
+  "theme.bar.transparent": true,
+  "theme.bar.buttons.monochrome": false,
+  "theme.font.weight": 600,
+  "bar.layouts": {
+    "0": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "volume",
+        "network",
+        "bluetooth",
+        "systray",
+        "media",
+        "notifications"
+      ]
+    },
+    "1": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "volume",
+        "media",
+        "notifications"
+      ]
+    },
+    "2": {
+      "left": [
+        "dashboard",
+        "workspaces",
+        "windowtitle"
+      ],
+      "middle": [
+        "clock"
+      ],
+      "right": [
+        "media",
+        "volume",
+        "notifications"
+      ]
+    }
+  },
+  "bar.network.showWifiInfo": false,
+  "theme.bar.menus.monochrome": false
+}

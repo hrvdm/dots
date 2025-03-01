@@ -30,11 +30,11 @@ git clone https://aur.archlinux.org/yay-bin.git && cd yay-bin && makepkg -si
 Install packages:
 
 ```
-sudo pacman -S hyprland hyprlock-git xdg-desktop-portal-hyprland zsh kitty nodejs npm bluez bluez-utils pulseaudio pulseaudio-bluetooth dunst pipewire wireplumber polkit polkit-kde-agent socat jq xorg-xev
+sudo pacman -S hyprland xdg-desktop-portal-hyprland zsh kitty nodejs npm dunst pipewire wireplumber polkit polkit-kde-agent socat jq
 ```
 
 ```
-yay -S rbenv eww-wayland swww wofi pulseaudio-ctl flameshot firefox discord ttf-iosevka-nerd noto-fonts-emoji ttf-jetbrains-mono ttf-nerd-fonts-symbols wl-clipboard hyprpicker-git visual-studio-code-bin
+yay -S rbenv wofi firefox discord ttf-iosevka-nerd noto-fonts-emoji ttf-jetbrains-mono ttf-nerd-fonts-symbols wl-clipboard hyprpicker-git visual-studio-code-bin hyprpaper hyprpolkitagent
 ```
 
 Install [oh-my-zsh](https://ohmyz.sh/#install)
@@ -55,19 +55,11 @@ curl -sS https://starship.rs/install.sh | sh
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 ```
 
-(_optional_) Install [macchina](https://github.com/Macchina-CLI/macchina/wiki/Installation)
-
-```
-cargo install macchina
-```
-
 _If you do not install the optional packages, edit the `.zshrc` in this repos /home/.zshrc_
 
 **Enable services:**
 
 ```
-systemctl enable ly.service
-sudo systemctl enable bluetooth.service --now
 sudo systemctl enable systemd-timesyncd.service --now
 ```
 
@@ -409,19 +401,3 @@ sudo systemctl enable fstrim.timer --now
 ```
 
 </details>
-
-<div align="center">
-<h2>📓 Credits</h2>
-</div>
-
-#### [1amSimp1e](https://github.com/1amSimp1e/dots/tree/summer%E2%98%80%EF%B8%8F)
-
-#### [k-vernooy](https://github.com/k-vernooy/dotfiles)
-
-#### [saimoomedits](https://github.com/saimoomedits/dotfiles)
-
-#### [JaKooLit](https://github.com/JaKooLit/Hyprland-Dots/tree/main)
-
-#### [sameemul-haque](https://github.com/sameemul-haque/dotfiles)
-
-#### [rxyhn](https://github.com/rxyhn/yoru)
