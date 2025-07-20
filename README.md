@@ -230,7 +230,7 @@ Even if you do not plan to use `vim`, you need it for `visudo`. You can change t
 
 - **Run pacstrap:**
 
-  `pacstrap -K /mnt base linux linux-firmware openssh git vim sudo nano networkmanager lvm2 reflector ufw base-devel rustup`
+  `pacstrap -K /mnt base linux linux-headers linux-firmware openssh git vim sudo nano networkmanager lvm2 reflector ufw base-devel rustup`
 
 ### Generate fstab
 
